@@ -1,0 +1,33 @@
+<form [formGroup]="userForm">
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="w-100">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="name" matInput>
+                <mat-error>
+                    Campo Requerido
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+       <div class="col-6">
+            <mat-form-field class="w-100">
+                <mat-label>Apellido</mat-label>
+                <input formControlName="lastname" matInput>
+                <mat-error>
+                    Campo Requerido
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-form-field class="w-100">
+                <mat-label>Email</mat-label>
+                <input formControlName="mail" matInput>
+                <mat-error>
+                    Campo Requerido
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</form>

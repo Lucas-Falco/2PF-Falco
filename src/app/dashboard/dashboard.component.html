@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <h2>OPCIONES</h2>
+      <li>
+      <ol><button mat-flat-button routerLink="home"><h2>HOME</h2></button></ol>
+      <ol><button mat-flat-button routerLink="usuarios"><h2>USUARIOS</h2></button></ol>
+      <ol><button mat-flat-button routerLink="courses"><h2>CURSOS</h2></button></ol>
+      </li>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+
+    <mat-toolbar  color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Academia del Negro</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar> 
+      <!-- <app-usuarios></app-usuarios>--> 
+      <router-outlet></router-outlet>
+  </mat-drawer-container>
+
